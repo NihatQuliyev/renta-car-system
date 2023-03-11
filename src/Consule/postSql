@@ -1,0 +1,34 @@
+CREATE TABLE car(
+    id serial primary key ,
+    brand varchar,
+    engine varchar,
+    production varchar,
+    bodyType varchar,
+    seats int,
+    doors int,
+    speed int,
+    rent_amount int,
+    status int
+);
+CREATE TABLE customer(
+    id serial primary key ,
+    name varchar,
+    surname varchar,
+    birthday date,
+    fin  varchar ,
+    passwordSerial varchar,
+    car_id int ,
+    status int ,
+    foreign key (car_id) references car
+);
+INSERT INTO car(brand, engine, production, bodyType, seats, doors, speed, rent_amount, status)
+VALUES ('bmw','abc','abc','body',5,4,250,410,1);
+
+INSERT INTO customer(NAME, SURNAME, BIRTHDAY, FIN, PASSWORDSERIAL, CAR_ID,status)
+VALUES ('Nihat','Surname','2000-10-10','1234','1213',1,1 );
+
+SELECT * FROM car WHERE status=1;
+SELECT * FROM customer WHERE status=1;
+
+INSERT INTO car(brand, engine, production, bodyType, seats, doors, speed, rent_amount, status)
+            VALUES (?,?,?,?,?,?,?,?,?)
