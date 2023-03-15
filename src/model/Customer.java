@@ -3,14 +3,14 @@ package model;
 import java.time.LocalDate;
 
 public class Customer {
-    Long id;
-    String name;
-    String surname;
-    LocalDate birthday;
-    String fin;
-    String passwordSerial;
-    Integer carId;
-    Integer status;
+    private Long id;
+    private String name;
+    private String surname;
+    private LocalDate birthday;
+    private String fin;
+    private String passwordSerial;
+    private Integer carId;
+    private Integer status;
 
     public Customer(String name, String surname, LocalDate birthday, String fin, String passwordSerial, Integer carId, Integer status) {
         this.name = name;

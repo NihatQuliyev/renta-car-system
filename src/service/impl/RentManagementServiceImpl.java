@@ -1,5 +1,7 @@
 package service.impl;
 import exception.InvalidOptionException;
+import exception.NotFoundCarException;
+import exception.NotFoundCustomerException;
 import service.CarService;
 import service.CustomerService;
 import service.RentManagementService;
@@ -19,7 +21,7 @@ public class RentManagementServiceImpl implements RentManagementService {
                     case 3 -> carService.addCar();
                     default -> throw new InvalidOptionException();
                 }
-            } catch (InvalidOptionException e) {
+            } catch (InvalidOptionException | NotFoundCustomerException | NotFoundCarException e) {
                 System.out.println(e.getMessage());
             }
         }

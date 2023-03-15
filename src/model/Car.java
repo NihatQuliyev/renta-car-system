@@ -1,16 +1,16 @@
 package model;
 
 public class Car {
-    Long id ;
-    String brand;
-    String engine;
-    String production;
-    String bodyType;
-    Integer seats;
-    Integer doors;
-    Integer speed;
-    Integer rentAmount;
-    Integer status;
+    private Long id ;
+    private String brand;
+    private String engine;
+    private String production;
+    private String bodyType;
+    private Integer seats;
+    private Integer doors;
+    private Integer speed;
+    private Integer rentAmount;
+    private Integer status;
 
     public Car(Long id, String brand, String engine, String production, String bodyType, Integer seats, Integer doors, Integer speed, Integer rentAmount, Integer status) {
         this.id = id;
