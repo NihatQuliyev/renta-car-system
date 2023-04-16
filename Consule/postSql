@@ -1,0 +1,24 @@
+CREATE TABLE car(
+    id serial primary key ,
+    brand varchar,
+    engine varchar,
+    production varchar,
+    bodyType varchar,
+    seats int,
+    doors int,
+    speed int,
+    rent_amount int,
+    status int
+);
+CREATE TABLE customer(
+    id serial primary key ,
+    name varchar,
+    surname varchar,
+    birthday date,
+    fin  varchar ,
+    passwordSerial varchar,
+    car_id int ,
+    status int ,
+    foreign key (car_id) references car
+);
+
